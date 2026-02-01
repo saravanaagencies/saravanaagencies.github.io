@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saravana Agencies | Quality Construction Materials</title>
+    <meta name="description"
+        content="Your trusted supplier of premium construction materials - Cement, Steel, Sand, Blue Metals, AAC Blocks and more. Building dreams with quality materials.">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Saravana Agencies | Quality Construction Materials">
+    <meta property="og:description"
+        content="Your trusted supplier of premium construction materials - Cement, Steel, Sand, Blue Metals, AAC Blocks and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/hero-bg.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===============================================
+           DESIGN SYSTEM
+           =============================================== */
+        :root {
+            /* Primary Colors */
+            --color-charcoal: hsl(220, 20%, 10%);
+            --color-charcoal-light: hsl(220, 15%, 15%);
+            --color-slate: hsl(215, 20%, 20%);
+
+            /* Accent Colors */
+            --color-amber: hsl(35, 95%, 55%);
+            --color-amber-dark: hsl(30, 90%, 45%);
+            --color-amber-glow: hsl(35, 100%, 65%);
+
+            /* Neutral Colors */
+            --color-white: hsl(0, 0%, 100%);
+            --color-off-white: hsl(40, 20%, 95%);
+            --color-gray-100: hsl(220, 10%, 90%);
+            --color-gray-300: hsl(220, 10%, 70%);
+            --color-gray-500: hsl(220, 10%, 50%);
+
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, hsla(220, 20%, 10%, 0.9) 0%, hsla(220, 20%, 10%, 0.7) 100%);
+            --gradient-dark: linear-gradient(180deg, hsl(220, 20%, 10%) 0%, hsl(220, 15%, 8%) 100%);
+            --gradient-amber: linear-gradient(135deg, hsl(35, 95%, 55%) 0%, hsl(25, 90%, 50%) 100%);
+            --gradient-card: linear-gradient(145deg, hsla(220, 15%, 18%, 0.9) 0%, hsla(220, 20%, 12%, 0.95) 100%);
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px hsla(0, 0%, 0%, 0.15);
+            --shadow-md: 0 4px 20px hsla(0, 0%, 0%, 0.25);
+            --shadow-lg: 0 8px 40px hsla(0, 0%, 0%, 0.35);
+            --shadow-amber: 0 4px 30px hsla(35, 95%, 55%, 0.3);
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Spacing */
+            --section-padding: clamp(60px, 10vw, 120px);
+            --container-max: 1400px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ===============================================
+           RESET & BASE
+           =============================================== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-charcoal);
+            color: var(--color-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ===============================================
+           UTILITIES
+           =============================================== */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 60px);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--color-gray-300);
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        .accent-text {
+            color: var(--color-amber);
+        }
+
+        .gradient-text {
+            background: var(--gradient-amber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===============================================
+           NAVIGATION
+           =============================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            background: transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background: hsla(220, 20%, 10%, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-amber);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-amber);
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-amber);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            color: var(--color-charcoal);
+            transition: var(--transition-fast);
+        }
+
+        .nav-cta:hover {
+            box-shadow: var(--shadow-amber);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--color-white);
+            transition: var(--transition-fast);
+        }
+
+        /* ===============================================
+           HERO SECTION
+           =============================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-hero);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: hsla(35, 95%, 55%, 0.15);
+            border: 1px solid hsla(35, 95%, 55%, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-amber);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.1s backwards;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--color-gray-100);
+            max-width: 550px;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        .btn-primary {
+            background: var(--gradient-amber);
+            color: var(--color-charcoal);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--shadow-amber);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-white);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            border: 2px solid var(--color-white);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-white);
+            color: var(--color-charcoal);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-gray-300);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--color-amber), transparent);
+        }
+
+        /* ===============================================
+           ABOUT SECTION
+           =============================================== */
+        .about {
+            padding: var(--section-padding) 0;
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            border-top: 4px solid var(--color-amber);
+            border-left: 4px solid var(--color-amber);
+            z-index: 2;
+        }
+
+        .about-content {
+            padding: 2rem 0;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid hsla(220, 10%, 50%, 0.2);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-amber);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--color-gray-300);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+
+        /* ===============================================
+           PRODUCTS SECTION
+           =============================================== */
+        .products {
+            padding: var(--section-padding) 0;
+            background: var(--color-charcoal);
+        }
+
+        .products-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .products-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--gradient-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
+            transition: var(--transition-smooth);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: hsla(35, 95%, 55%, 0.3);
+        }
+
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, hsla(220, 20%, 10%, 0.8) 0%, transparent 60%);
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            font-size: 0.9rem;
+            color: var(--color-gray-300);
+            margin-bottom: 1rem;
+        }
+
+        .product-variants {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .variant-tag {
+            background: hsla(35, 95%, 55%, 0.1);
+            color: var(--color-amber);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===============================================
+           PARALLAX DIVIDER
+           =============================================== */
+        .parallax-divider {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-divider-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .parallax-divider-overlay {
+            position: absolute;
+            inset: 0;
+            background: hsla(220, 20%, 10%, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parallax-divider-content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .parallax-divider-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4rem);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ===============================================
+           WHY CHOOSE US
+           =============================================== */
+        .why-us {
+            padding: var(--section-padding) 0;
+            background: var(--color-charcoal-light);
+        }
+
+        .why-us-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .why-us-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: hsla(220, 15%, 12%, 0.5);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            background: hsla(220, 15%, 15%, 0.8);
+            border-color: hsla(35, 95%, 55%, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-amber);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+        }
+
+        .feature-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            font-size: 0.95rem;
+            color: var(--color-gray-300);
+            line-height: 1.7;
+        }
+
+        /* ===============================================
+           BRANDS SECTION
+           =============================================== */
+        .brands {
+            padding: calc(var(--section-padding) / 2) 0;
+            background: var(--color-charcoal);
+            border-top: 1px solid hsla(220, 10%, 50%, 0.1);
+            border-bottom: 1px solid hsla(220, 10%, 50%, 0.1);
+        }
+
+        .brands-title {
+            text-align: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-gray-500);
+            margin-bottom: 2rem;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem 3rem;
+            align-items: center;
+        }
+
+        .brand-item {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-gray-300);
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            transition: var(--transition-fast);
+        }
+
+        .brand-item:hover {
+            opacity: 1;
+            color: var(--color-amber);
+        }
+
+        /* ===============================================
+           CONTACT SECTION
+           =============================================== */
+        .contact {
+            padding: var(--section-padding) 0;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('/images/cement.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            letter-spacing: 0.1em;
+            color: var(--color-amber);
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3:first-child {
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            color: var(--color-gray-100);
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            background: var(--gradient-card);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: var(--color-gray-300);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: hsla(220, 20%, 10%, 0.5);
+            border: 1px solid hsla(220, 10%, 50%, 0.2);
+            border-radius: 6px;
+            color: var(--color-white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-amber);
+            box-shadow: 0 0 0 3px hsla(35, 95%, 55%, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form .btn-primary {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        /* ===============================================
+           FOOTER
+           =============================================== */
+        .footer {
+            padding: 3rem 0;
+            background: hsl(220, 20%, 6%);
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: var(--color-gray-500);
+        }
+
+        /* ===============================================
+           ANIMATIONS
+           =============================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===============================================
+           RESPONSIVE
+           =============================================== */
+        @media (max-width: 992px) {
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: clamp(2.5rem, 12vw, 4rem);
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .parallax-divider {
+                height: 300px;
+            }
+
+            .parallax-divider-bg,
+            .hero-bg {
+                background-attachment: scroll;
+            }
+
+            .contact-bg {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">SA</span>
+                Saravana Agencies
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Quote</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                Premium Quality Materials
+            </span>
+            <h1 class="hero-title">
+                Build Your <br>
+                <span class="gradient-text">Dreams</span> With Us
+            </h1>
+            <p class="hero-description">
+                Your trusted partner for premium construction materials. From cement to steel,
+                we provide everything you need to bring your construction projects to life.
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn-primary">Explore Products</a>
+                <a href="#contact" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img src="/images/cement.jpg" alt="Construction materials warehouse">
+                </div>
+                <div class="about-content fade-in">
+                    <h2 class="section-title">Building Trust <br><span class="accent-text">Since Day One</span></h2>
+                    <p class="section-subtitle">
+                        We are your one-stop destination for all construction materials. With a commitment
+                        to quality and customer satisfaction, we provide premium products from trusted brands
+                        that meet the highest industry standards.
+                    </p>
+                    <p style="margin-top: 1.5rem; color: var(--color-gray-300);">
+                        Our extensive inventory includes sand, cement, steel, blue metals, AAC blocks, and
+                        specialized construction materials. We serve contractors, builders, and individual
+                        customers with the same dedication to excellence.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Products</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Cement Brands</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Divider -->
+    <div class="parallax-divider">
+        <div class="parallax-divider-bg" style="background-image: url('/images/steel.jpg');"></div>
+        <div class="parallax-divider-overlay">
+            <div class="parallax-divider-content">
+                <h3 class="parallax-divider-title">Quality You Can <span class="gradient-text">Trust</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products-header fade-in">
+                <h2 class="section-title">Our <span class="accent-text">Products</span></h2>
+                <p class="section-subtitle">
+                    Comprehensive range of construction materials for all your building needs
+                </p>
+            </div>
+            <div class="products-grid">
+                <!-- Sand Products -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/sand.jpg" alt="Construction Sand">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sand</h3>
+                        <p class="product-description">
+                            High-quality manufactured and natural sand for construction excellence.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">M Sand</span>
+                            <span class="variant-tag">P Sand</span>
+                            <span class="variant-tag">Vanthavaasi Rough</span>
+                            <span class="variant-tag">Vanthavaasi Nice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blue Metals -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/blue-metals.jpg" alt="Blue Metals Aggregate">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Blue Metals</h3>
+                        <p class="product-description">
+                            Premium quality crushed stone aggregates in various sizes.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">3/4 Jalli</span>
+                            <span class="variant-tag">O 3/4</span>
+                            <span class="variant-tag">1 1/2</span>
+                            <span class="variant-tag">Chips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cement -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/cement.jpg" alt="Cement Bags">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cement</h3>
+                        <p class="product-description">
+                            Top cement brands known for strength and durability.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">Ultra Tech</span>
+                            <span class="variant-tag">Coromandel</span>
+                            <span class="variant-tag">Maha HD</span>
+                            <span class="variant-tag">Zuari</span>
+                            <span class="variant-tag">Dalmia</span>
+                            <span class="variant-tag">Ramco</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steel -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/steel.jpg" alt="TMT Steel Bars">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Steel</h3>
+                        <p class="product-description">
+                            High-grade TMT steel bars for reinforced construction.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">iSteel</span>
+                            <span class="variant-tag">ARS</span>
+                            <span class="variant-tag">Tirumala</span>
+                        </div>
+                        <p style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--color-gray-300);">
+                            Sizes: 6mm, 8mm, 10mm, 12mm, 25mm, 32mm, 40mm
+                        </p>
+                    </div>
+                </div>
+
+                <!-- AAC Blocks -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/aac-blocks.jpg" alt="AAC Blocks">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">AAC Blocks</h3>
+                        <p class="product-description">
+                            Lightweight autoclaved aerated concrete blocks for modern construction.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">4 Inch</span>
+                            <span class="variant-tag">6 Inch</span>
+                            <span class="variant-tag">8 Inch</span>
+                            <span class="variant-tag">9 Inch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weber -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="/images/hero-bg.jpg" alt="Weber Construction Paste">
+                        <div class="product-image-overlay"></div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Weber</h3>
+                        <p class="product-description">
+                            Specialized paste for AAC block construction and bonding.
+                        </p>
+                        <div class="product-variants">
+                            <span class="variant-tag">AAC Block Paste</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <div class="container">
+            <p class="brands-title">Trusted Brands We Stock</p>
+            <div class="brands-grid">
+                <span class="brand-item">ULTRA TECH</span>
+                <span class="brand-item">COROMANDEL</span>
+                <span class="brand-item">DALMIA</span>
+                <span class="brand-item">RAMCO</span>
+                <span class="brand-item">iSTEEL</span>
+                <span class="brand-item">TIRUMALA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="why-us-header fade-in">
+                <h2 class="section-title">Why <span class="accent-text">Choose Us</span></h2>
+                <p class="section-subtitle">
+                    We go beyond just selling materials – we build lasting relationships
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Premium Quality</h3>
+                    <p class="feature-description">
+                        Only the finest construction materials from trusted brands that meet
+                        rigorous quality standards for your peace of mind.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-description">
+                        Quick and reliable delivery service to your construction site.
+                        We understand that time is money in construction.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Best Prices</h3>
+                    <p class="feature-description">
+                        Competitive pricing without compromising on quality.
+                        Get the best value for your investment.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Expert Support</h3>
+                    <p class="feature-description">
+                        Our experienced team provides guidance on material selection
+                        and quantity estimation for your projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Divider 2 -->
+    <div class="parallax-divider">
+        <div class="parallax-divider-bg" style="background-image: url('/images/blue-metals.jpg');"></div>
+        <div class="parallax-divider-overlay">
+            <div class="parallax-divider-content">
+                <h3 class="parallax-divider-title">Ready to Start Your <span class="gradient-text">Project?</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-bg"></div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h2 class="section-title">Get In <span class="accent-text">Touch</span></h2>
+                    <p class="section-subtitle">
+                        Ready to start your construction project? Reach out to us for quotes,
+                        product inquiries, or any questions.
+                    </p>
+
+                    <h3>📍 Visit Our Store</h3>
+                    <p>Address will be updated soon</p>
+
+                    <h3>📞 Call Us</h3>
+                    <p>Contact number coming soon</p>
+
+                    <h3>📧 Email Us</h3>
+                    <p>Email will be updated soon</p>
+
+                    <h3>⏰ Working Hours</h3>
+                    <p>Monday - Saturday: 8:00 AM - 7:00 PM<br>
+                        Sunday: 9:00 AM - 1:00 PM</p>
+                </div>
+                <div class="contact-form fade-in">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your requirements..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Saravana Agencies</div>
+            <p class="footer-text">© 2025 Saravana Agencies. All rights reserved. | Building Quality, Building Trust</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in on scroll animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                if (window.innerWidth <= 992) {
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '100%';
+                    navLinks.style.left = '0';
+                    navLinks.style.right = '0';
+                    navLinks.style.background = 'hsl(220, 20%, 10%)';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.padding = '1rem';
+                    navLinks.style.gap = '1rem';
+                }
+            });
+        }
+
+        // Form submission (placeholder)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
