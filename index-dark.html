@@ -27,34 +27,34 @@
            DESIGN SYSTEM
            =============================================== */
         :root {
-            /* Primary Colors - Light Theme */
-            --color-charcoal: hsl(0, 0%, 100%);
-            --color-charcoal-light: hsl(220, 20%, 97%);
-            --color-slate: hsl(220, 15%, 95%);
+            /* Primary Colors */
+            --color-charcoal: hsl(220, 20%, 10%);
+            --color-charcoal-light: hsl(220, 15%, 15%);
+            --color-slate: hsl(215, 20%, 20%);
 
             /* Accent Colors */
-            --color-amber: hsl(25, 90%, 50%);
-            --color-amber-dark: hsl(20, 95%, 40%);
-            --color-amber-glow: hsl(30, 100%, 55%);
+            --color-amber: hsl(35, 95%, 55%);
+            --color-amber-dark: hsl(30, 90%, 45%);
+            --color-amber-glow: hsl(35, 100%, 65%);
 
-            /* Neutral Colors - Inverted for light theme */
-            --color-white: hsl(220, 20%, 15%);
-            --color-off-white: hsl(220, 15%, 20%);
-            --color-gray-100: hsl(220, 10%, 25%);
-            --color-gray-300: hsl(220, 10%, 40%);
-            --color-gray-500: hsl(220, 10%, 55%);
+            /* Neutral Colors */
+            --color-white: hsl(0, 0%, 100%);
+            --color-off-white: hsl(40, 20%, 95%);
+            --color-gray-100: hsl(220, 10%, 90%);
+            --color-gray-300: hsl(220, 10%, 70%);
+            --color-gray-500: hsl(220, 10%, 50%);
 
-            /* Gradients - Light Theme */
-            --gradient-hero: linear-gradient(135deg, hsla(0, 0%, 100%, 0.85) 0%, hsla(220, 20%, 98%, 0.75) 100%);
-            --gradient-dark: linear-gradient(180deg, hsl(220, 20%, 98%) 0%, hsl(220, 15%, 96%) 100%);
-            --gradient-amber: linear-gradient(135deg, hsl(25, 90%, 50%) 0%, hsl(15, 95%, 45%) 100%);
-            --gradient-card: linear-gradient(145deg, hsla(0, 0%, 100%, 0.95) 0%, hsla(220, 20%, 98%, 0.98) 100%);
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, hsla(220, 20%, 10%, 0.9) 0%, hsla(220, 20%, 10%, 0.7) 100%);
+            --gradient-dark: linear-gradient(180deg, hsl(220, 20%, 10%) 0%, hsl(220, 15%, 8%) 100%);
+            --gradient-amber: linear-gradient(135deg, hsl(35, 95%, 55%) 0%, hsl(25, 90%, 50%) 100%);
+            --gradient-card: linear-gradient(145deg, hsla(220, 15%, 18%, 0.9) 0%, hsla(220, 20%, 12%, 0.95) 100%);
 
-            /* Shadows - Softer for light theme */
-            --shadow-sm: 0 2px 8px hsla(220, 20%, 10%, 0.08);
-            --shadow-md: 0 4px 20px hsla(220, 20%, 10%, 0.12);
-            --shadow-lg: 0 8px 40px hsla(220, 20%, 10%, 0.15);
-            --shadow-amber: 0 4px 30px hsla(25, 90%, 50%, 0.25);
+            /* Shadows */
+            --shadow-sm: 0 2px 8px hsla(0, 0%, 0%, 0.15);
+            --shadow-md: 0 4px 20px hsla(0, 0%, 0%, 0.25);
+            --shadow-lg: 0 8px 40px hsla(0, 0%, 0%, 0.35);
+            --shadow-amber: 0 4px 30px hsla(35, 95%, 55%, 0.3);
 
             /* Typography */
             --font-display: 'Bebas Neue', sans-serif;
@@ -154,7 +154,7 @@
         }
 
         .navbar.scrolled {
-            background: hsla(0, 0%, 100%, 0.95);
+            background: hsla(220, 20%, 10%, 0.95);
             backdrop-filter: blur(20px);
             box-shadow: var(--shadow-md);
         }
@@ -246,7 +246,7 @@
         .mobile-menu-btn span {
             width: 25px;
             height: 2px;
-            background: hsl(220, 20%, 20%);
+            background: var(--color-white);
             transition: var(--transition-fast);
         }
 
@@ -345,21 +345,21 @@
 
         .btn-secondary {
             background: transparent;
-            color: hsl(220, 20%, 20%);
+            color: var(--color-white);
             padding: 1rem 2rem;
             border-radius: 4px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-size: 0.9rem;
-            border: 2px solid hsl(220, 20%, 20%);
+            border: 2px solid var(--color-white);
             cursor: pointer;
             transition: var(--transition-fast);
         }
 
         .btn-secondary:hover {
-            background: hsl(220, 20%, 20%);
-            color: hsl(0, 0%, 100%);
+            background: var(--color-white);
+            color: var(--color-charcoal);
         }
 
         .hero-scroll {
@@ -439,7 +439,7 @@
             gap: 2rem;
             margin-top: 3rem;
             padding-top: 3rem;
-            border-top: 1px solid hsla(220, 20%, 20%, 0.1);
+            border-top: 1px solid hsla(220, 10%, 50%, 0.2);
         }
 
         .stat {
@@ -488,7 +488,7 @@
             background: var(--gradient-card);
             border-radius: 12px;
             overflow: hidden;
-            border: 1px solid hsla(220, 20%, 20%, 0.08);
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
             transition: var(--transition-smooth);
         }
 
@@ -518,7 +518,7 @@
         .product-image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, hsla(0, 0%, 100%, 0.9) 0%, transparent 60%);
+            background: linear-gradient(to top, hsla(220, 20%, 10%, 0.8) 0%, transparent 60%);
         }
 
         .product-content {
@@ -545,12 +545,12 @@
         }
 
         .variant-tag {
-            background: hsla(25, 90%, 50%, 0.1);
+            background: hsla(35, 95%, 55%, 0.1);
             color: var(--color-amber);
             padding: 0.35rem 0.75rem;
             border-radius: 4px;
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
@@ -575,7 +575,7 @@
         .parallax-divider-overlay {
             position: absolute;
             inset: 0;
-            background: hsla(0, 0%, 100%, 0.85);
+            background: hsla(220, 20%, 10%, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -617,20 +617,18 @@
         }
 
         .feature-card {
-            background: hsla(0, 0%, 100%, 0.8);
+            background: hsla(220, 15%, 12%, 0.5);
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid hsla(220, 20%, 20%, 0.08);
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
             text-align: center;
             transition: var(--transition-smooth);
-            box-shadow: var(--shadow-sm);
         }
 
         .feature-card:hover {
-            background: hsl(0, 0%, 100%);
-            border-color: hsla(25, 90%, 50%, 0.2);
+            background: hsla(220, 15%, 15%, 0.8);
+            border-color: hsla(35, 95%, 55%, 0.2);
             transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
         }
 
         .feature-icon {
@@ -663,9 +661,9 @@
            =============================================== */
         .brands {
             padding: calc(var(--section-padding) / 2) 0;
-            background: hsl(220, 20%, 96%);
-            border-top: 1px solid hsla(220, 20%, 20%, 0.08);
-            border-bottom: 1px solid hsla(220, 20%, 20%, 0.08);
+            background: var(--color-charcoal);
+            border-top: 1px solid hsla(220, 10%, 50%, 0.1);
+            border-bottom: 1px solid hsla(220, 10%, 50%, 0.1);
         }
 
         .brands-title {
@@ -748,11 +746,10 @@
         }
 
         .contact-form {
-            background: hsl(0, 0%, 100%);
+            background: var(--gradient-card);
             padding: 2.5rem;
             border-radius: 12px;
-            border: 1px solid hsla(220, 20%, 20%, 0.08);
-            box-shadow: var(--shadow-md);
+            border: 1px solid hsla(220, 10%, 50%, 0.1);
         }
 
         .form-group {
@@ -773,10 +770,10 @@
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            background: hsl(220, 20%, 98%);
-            border: 1px solid hsla(220, 20%, 20%, 0.12);
+            background: hsla(220, 20%, 10%, 0.5);
+            border: 1px solid hsla(220, 10%, 50%, 0.2);
             border-radius: 6px;
-            color: hsl(220, 20%, 15%);
+            color: var(--color-white);
             font-family: var(--font-body);
             font-size: 1rem;
             transition: var(--transition-fast);
@@ -786,7 +783,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--color-amber);
-            box-shadow: 0 0 0 3px hsla(25, 90%, 50%, 0.15);
+            box-shadow: 0 0 0 3px hsla(35, 95%, 55%, 0.1);
         }
 
         .form-group textarea {
@@ -804,7 +801,7 @@
            =============================================== */
         .footer {
             padding: 3rem 0;
-            background: hsl(220, 20%, 15%);
+            background: hsl(220, 20%, 6%);
             text-align: center;
         }
 
@@ -813,12 +810,11 @@
             font-size: 1.5rem;
             letter-spacing: 0.1em;
             margin-bottom: 1rem;
-            color: hsl(0, 0%, 100%);
         }
 
         .footer-text {
             font-size: 0.9rem;
-            color: hsl(220, 10%, 70%);
+            color: var(--color-gray-500);
         }
 
         /* ===============================================
@@ -926,8 +922,8 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <span class="logo-icon" style="color: #fff;">SA</span>
-                <span>Saravana Agencies</span>
+                <span class="logo-icon">SA</span>
+                Saravana Agencies
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -1241,18 +1237,17 @@
                     </p>
 
                     <h3>📍 Visit Our Store</h3>
-                    <p> Saravana Agencies<br /> 7, Red Hills Road, United Colony, Kolathur, Chennai, Tamil Nadu 600099
-                    </p>
+                    <p>Address will be updated soon</p>
 
                     <h3>📞 Call Us</h3>
-                    <p>+91 80561 98019</p>
+                    <p>Contact number coming soon</p>
 
                     <h3>📧 Email Us</h3>
-                    <p>saravanaagencies1992@gmail.com</p>
+                    <p>Email will be updated soon</p>
 
                     <h3>⏰ Working Hours</h3>
-                    <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
-                    </p>
+                    <p>Monday - Saturday: 8:00 AM - 7:00 PM<br>
+                        Sunday: 9:00 AM - 1:00 PM</p>
                 </div>
                 <div class="contact-form fade-in">
                     <form>
@@ -1280,13 +1275,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">Saravana Agencies</div>
-            <p class="footer-text">
-                © <span id="footer-year"></span> Saravana Agencies. All rights reserved. | Building Quality, Building
-                Trust
-            </p>
-            <script>
-                document.getElementById('footer-year').textContent = new Date().getFullYear();
-            </script>
+            <p class="footer-text">© 2025 Saravana Agencies. All rights reserved. | Building Quality, Building Trust</p>
         </div>
     </footer>
 
@@ -1346,11 +1335,10 @@
                     navLinks.style.top = '100%';
                     navLinks.style.left = '0';
                     navLinks.style.right = '0';
-                    navLinks.style.background = 'hsl(0, 0%, 100%)';
+                    navLinks.style.background = 'hsl(220, 20%, 10%)';
                     navLinks.style.flexDirection = 'column';
                     navLinks.style.padding = '1rem';
                     navLinks.style.gap = '1rem';
-                    navLinks.style.boxShadow = '0 4px 20px hsla(220, 20%, 10%, 0.1)';
                 }
             });
         }
