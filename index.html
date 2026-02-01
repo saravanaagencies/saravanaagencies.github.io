@@ -1166,9 +1166,8 @@
                             High-quality red clay bricks for strong and durable construction.
                         </p>
                         <div class="product-variants">
-                            <span class="variant-tag">Chamber Bricks</span>
-                            <span class="variant-tag">Country Bricks</span>
-                            <span class="variant-tag">Wire-cut Bricks</span>
+                            <span class="variant-tag">Box Bricks</span>
+                            <span class="variant-tag">Wire Cut Bricks</span>
                         </div>
                     </div>
                 </div>
@@ -1270,11 +1269,17 @@
                     <p>saravanaagencies1992@gmail.com</p>
 
                     <h3>⏰ Working Hours</h3>
-                    <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                    <p>Monday - Saturday: 8:00 AM - 7:00 PM<br>
                     </p>
                 </div>
                 <div class="contact-form fade-in">
-                    <form>
+                    <form id="contact-form">
+                        <!-- Honeypot field to catch bots -->
+                        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1"
+                            autocomplete="off">
+                        <!-- Security Token -->
+                        <input type="hidden" name="token" value="SA_PROD_2025_SECURE_TOKEN">
+
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -1288,7 +1293,10 @@
                             <textarea id="message" name="message" placeholder="Tell us about your requirements..."
                                 required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
+                        <button type="submit" id="submit-btn" class="btn-primary">Send Message</button>
+                        <div id="form-response"
+                            style="margin-top: 1.5rem; padding: 1rem; border-radius: 6px; display: none; text-align: center; font-weight: 500;">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -1374,12 +1382,57 @@
             });
         }
 
-        // Form submission (placeholder)
-        const form = document.querySelector('form');
+        // Form submission to Google Sheets
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const responseMsg = document.getElementById('form-response');
+
+        // REPLACE THIS URL with your deployed Google Apps Script Web App URL
+        const STR_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXaf6sZ8rFvKOVNSRq4VABwun1wPi1mH6sYXEWTgEWA9qNFePtUyWmTNkRD2t-BMZ3qQ/exec";
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            form.reset();
+
+            // Check honeypot
+            if (form._gotcha.value !== "") {
+                console.log("Bot detected");
+                return;
+            }
+
+            // Update UI to loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            responseMsg.style.display = 'none';
+
+            const formData = new FormData(form);
+
+            fetch(STR_SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+
+                    // Show success message
+                    responseMsg.textContent = 'Thank you! Your message has been sent successfully.';
+                    responseMsg.style.backgroundColor = 'rgba(76, 175, 80, 0.1)';
+                    responseMsg.style.color = '#4CAF50';
+                    responseMsg.style.display = 'block';
+
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+
+                    // Show error message
+                    responseMsg.textContent = 'Oops! Something went wrong. Please try again or call us directly.';
+                    responseMsg.style.backgroundColor = 'rgba(244, 67, 54, 0.1)';
+                    responseMsg.style.color = '#F44336';
+                    responseMsg.style.display = 'block';
+                });
         });
     </script>
 </body>
